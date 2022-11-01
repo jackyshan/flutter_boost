@@ -41,6 +41,7 @@ class BoostDelegate: NSObject,FlutterBoostDelegate {
     
     func pushFlutterRoute(_ options: FlutterBoostRouteOptions!) {
         let vc:FBFlutterViewContainer = FBFlutterViewContainer()
+        vc.hiddenNavigationBar = options.hiddenNavigationBar;
         vc.setName(options.pageName, uniqueId: options.uniqueId, params: options.arguments,opaque: options.opaque)
         
         //用参数来控制是push还是pop

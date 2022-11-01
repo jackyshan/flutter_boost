@@ -274,6 +274,8 @@ _Pragma("clang diagnostic pop")
     //for better performance.
     [self attatchFlutterEngine];
     
+    [self.navigationController setNavigationBarHidden:self.hiddenNavigationBar animated:YES];
+    
     [super bridge_viewWillAppear:animated];
     [self.view setNeedsLayout];//TODO:通过param来设定
     
@@ -299,6 +301,7 @@ _Pragma("clang diagnostic pop")
     if (self.disablePopGesture) {
         self.navigationController.interactivePopGestureRecognizer.enabled = ![self.disablePopGesture boolValue];
     }
+
     [FB_PLUGIN containerAppeared:self];
 }
 

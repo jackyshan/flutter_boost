@@ -69,4 +69,8 @@
 
 ///这个页面是否透明 注意:default value = YES
 @property(nonatomic,assign) BOOL opaque;
+
+///navigationBar是否隐藏 注意:default value = NO
+@property(nonatomic,assign) BOOL hiddenNavigationBar;
+
 @end

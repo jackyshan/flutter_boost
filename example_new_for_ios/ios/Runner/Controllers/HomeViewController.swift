@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         let options = FlutterBoostRouteOptions()
         options.pageName = "mainPage"
         options.arguments = ["data":textField.text ?? ""]
+        options.hiddenNavigationBar = false
         
         //这个是push操作完成的回调，而不是页面关闭的回调！！！！
         options.completion = { completion in
@@ -144,7 +145,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLoad() {
